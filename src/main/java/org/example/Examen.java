@@ -32,7 +32,7 @@ public class Examen {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("INTRODUCE UN NUOMBRE");
+        System.out.println("INTRODUCE UN NUOMBRE:");
         String nombre = entrada.next();
 
         System.out.println("La obra de "+ nombre);

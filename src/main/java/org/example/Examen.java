@@ -57,7 +57,7 @@ public class Examen {
                 System.out.println("El azulejo no puede ser cuadrado");
             }
             else {
-                
+
             }
         }
 

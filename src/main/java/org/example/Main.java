@@ -5,11 +5,11 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Examen EJERCICIO = new Examen();
-        EJERCICIO.ejercicio1();
-
         //Examen EJERCICIO = new Examen();
-        //EJERCICIO.ejercicio2();
+       //EJERCICIO.ejercicio1();
+
+        Examen EJERCICIO = new Examen();
+        EJERCICIO.ejercicio2();
 
     }
 }

@@ -30,5 +30,36 @@ public class Examen {
 
     public void ejercicio2(){
 
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("INTRODUCE UN NUOMBRE");
+        String nombre = entrada.next();
+
+        System.out.println("La obra de "+ nombre);
+
+        System.out.println("Introduce el ancho de la pared");
+        int ancho = entrada.nextInt();
+
+        System.out.println("Introduce el largo de la pared");
+        int largo = entrada.nextInt();
+
+        System.out.println("Introduce el ancho del azulejo");
+        int anchoA = entrada.nextInt();
+
+        System.out.println("Introduce el largo del azulejo");
+        int largoA = entrada.nextInt();
+
+        if (anchoA > ancho && largoA > largo || anchoA > largo && largoA > ancho){
+            System.out.println("El azulejo no puede ser mas grande que la pared");
+        }
+        else{
+            if (anchoA == largoA) {
+                System.out.println("El azulejo no puede ser cuadrado");
+            }
+            else {
+                
+            }
+        }
+
     }
 }

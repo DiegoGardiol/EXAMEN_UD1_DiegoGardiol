@@ -33,7 +33,18 @@ public class Examen {
         Scanner entrada = new Scanner(System.in);
 
         System.out.println("INTRODUCE UN NOMBRE:");
-        String nombre = entrada.next();
+        String nombre = "";
+        boolean nombreValido = false;
+
+        while (!nombreValido) {
+            nombre = entrada.next(); // Lee el nombre
+
+            if (nombre.matches("[a-zA-Z]+")) { // Verifica si el nombre solo contiene letras
+                nombreValido = true;
+            } else {
+                System.out.println("ERROR. El nombre solo debe contener letras. Inténtalo de nuevo:");
+            }
+        }
         System.out.println("La obra de " + nombre);
 
         int num1 = -1;

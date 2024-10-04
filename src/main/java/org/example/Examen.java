@@ -57,7 +57,11 @@ public class Examen {
                 System.out.println("El azulejo no puede ser cuadrado");
             }
             else {
+                    float res1 = ancho * largo;
+                    float res2 = anchoA * largoA;
+                    float res3 = res1 / res2;
 
+                    System.out.println("Se necesitan "+ res3 + " azulejos");
             }
         }
 

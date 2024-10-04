@@ -22,7 +22,7 @@ public class Examen {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("ERROR. Debes introducir un número válido.");
-                entrada.next(); // Limpiar el buffer del scanner
+                entrada.next(); // Limpiar el buffer del scanner, si no lo pongo queda en bucle infinito.
             }
 
         }

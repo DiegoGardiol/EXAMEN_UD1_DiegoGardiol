@@ -4,12 +4,11 @@ package org.example;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
+       Examen EJERCICIO = new Examen();
+       EJERCICIO.ejercicio1();
 
-        //Examen EJERCICIO = new Examen();
-       //EJERCICIO.ejercicio1();
-
-        Examen EJERCICIO = new Examen();
-        EJERCICIO.ejercicio2();
+       EJERCICIO = new Examen();
+       EJERCICIO.ejercicio2();
 
     }
 }

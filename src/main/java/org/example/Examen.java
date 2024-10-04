@@ -32,36 +32,45 @@ public class Examen {
 
         Scanner entrada = new Scanner(System.in);
 
-        System.out.println("INTRODUCE UN NUOMBRE:");
+        System.out.println("INTRODUCE UN NOMBRE:");
         String nombre = entrada.next();
+        System.out.println("La obra de " + nombre);
 
-        System.out.println("La obra de "+ nombre);
+        int num1 = -1;
+        while (num1 < 0) {
+            try {
+                System.out.println("Introduce el ancho de la pared");
+                int ancho = entrada.nextInt();
 
-        System.out.println("Introduce el ancho de la pared");
-        int ancho = entrada.nextInt();
+                System.out.println("Introduce el largo de la pared");
+                int largo = entrada.nextInt();
 
-        System.out.println("Introduce el largo de la pared");
-        int largo = entrada.nextInt();
+                System.out.println("Introduce el ancho del azulejo");
+                int anchoA = entrada.nextInt();
 
-        System.out.println("Introduce el ancho del azulejo");
-        int anchoA = entrada.nextInt();
+                System.out.println("Introduce el largo del azulejo");
+                int largoA = entrada.nextInt();
 
-        System.out.println("Introduce el largo del azulejo");
-        int largoA = entrada.nextInt();
+                if (anchoA > ancho && largoA > largo || anchoA > largo && largoA > ancho) {
+                    System.out.println("El azulejo no puede ser mas grande que la pared");
+                    break;
+                } else {
+                    if (anchoA == largoA) {
+                        System.out.println("El azulejo no puede ser cuadrado");
+                        break;
+                    } else {
+                        float res1 = ancho * largo;
+                        float res2 = anchoA * largoA;
+                        float res3 = res1 / res2;
 
-        if (anchoA > ancho && largoA > largo || anchoA > largo && largoA > ancho){
-            System.out.println("El azulejo no puede ser mas grande que la pared");
-        }
-        else{
-            if (anchoA == largoA) {
-                System.out.println("El azulejo no puede ser cuadrado");
+                        System.out.println("Se necesitan " + res3 + " azulejos");
+                        break;
+                    }
+                }
             }
-            else {
-                    float res1 = ancho * largo;
-                    float res2 = anchoA * largoA;
-                    float res3 = res1 / res2;
-
-                    System.out.println("Se necesitan "+ res3 + " azulejos");
+            catch (InputMismatchException e) {
+                System.out.println("ERROR. Debes introducir un número válido.");
+                entrada.next();
             }
         }
 

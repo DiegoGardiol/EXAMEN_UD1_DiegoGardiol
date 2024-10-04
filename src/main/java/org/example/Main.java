@@ -5,9 +5,9 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
        Examen EJERCICIO = new Examen();
-       EJERCICIO.ejercicio1();
+       //EJERCICIO.ejercicio1();
 
-       EJERCICIO = new Examen();
+       //fEJERCICIO = new Examen();
        EJERCICIO.ejercicio2();
 
     }
